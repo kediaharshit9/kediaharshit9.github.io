@@ -20,12 +20,26 @@
         <div class="header">
           <div class="profile-section">
             <div class="profile-image">
-              <img src="./images/hk.png" alt="Harshit Kedia" />
+              <img
+                src="./images/hk.png"
+                alt="Harshit Kedia"
+                onclick="openImageModal()"
+                style="cursor: pointer"
+              />
             </div>
             <div class="name-section">
               <h2>Harshit Kedia</h2>
               <p class="subtitle">Building GenAI for India</p>
             </div>
+          </div>
+        </div>
+
+        <!-- Image Modal -->
+        <div id="imageModal" class="modal" onclick="closeImageModal()">
+          <div class="modal-content">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <img src="./images/hk.png" alt="Harshit Kedia" id="modalImage" />
+            <div class="modal-catchy-phrase">🚀 Code. Create. Conquer.</div>
           </div>
         </div>
 
@@ -60,8 +74,8 @@
                 <span class="duration">Aug 2023 - Present</span>
               </div>
               <p class="job-description">
-                Building GenAI solutions for scale. Working on post-training
-                LLMs, creating AI agents.
+                Building GenAI solutions for Bharat. Creating AI agents, and
+                training usecase specific LLMs.
               </p>
             </div>
 
@@ -72,9 +86,9 @@
                 <span class="duration">Jul 2022 - Aug 2023</span>
               </div>
               <p class="job-description">
-                Low latency Shared Memory communications, speeding up
-                simulations, crypto instruments support, any many book and order
-                management alphas.
+                Low latency shared-memory communications, speeding up
+                simulations, crypto instruments trading support, any many book
+                and order management alphas.
               </p>
             </div>
           </div>
@@ -189,12 +203,17 @@
           >
             <div class="publication">
               <strong>
-                Naamapadam: A Large-Scale Named Entity Annotated Data for Indic
-                Languages
+                <a
+                  href="https://aclanthology.org/2023.acl-long.582/"
+                  target="_blank"
+                >
+                  Naamapadam: A Large-Scale Named Entity Annotated Data for
+                  Indic Languages
+                </a>
               </strong>
               <p class="publication-description">
-                Created a NER dataset and trained a SOTA BERT based model for
-                Indian languages with high accuracy.
+                Created a NER dataset and trained a BERT based model for Indian
+                languages with state-of-the-art accuracy.
               </p>
             </div>
           </div>
@@ -211,6 +230,21 @@
               toggle.style.transform = "rotate(-90deg)";
             }
           }
+
+          function openImageModal() {
+            document.getElementById("imageModal").style.display = "block";
+          }
+
+          function closeImageModal() {
+            document.getElementById("imageModal").style.display = "none";
+          }
+
+          // Close modal when pressing Escape key
+          document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+              closeImageModal();
+            }
+          });
         </script>
         <!-- Footer Links -->
         <div class="links">
