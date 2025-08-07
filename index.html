@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Harshit Kedia - AI/ML Engineer" />
+    <title>Harshit Kedia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <!-- Header with Image and Name -->
+        <div class="header">
+          <div class="profile-section">
+            <div class="profile-image">
+              <img src="./images/hk.png" alt="Harshit Kedia" />
+            </div>
+            <div class="name-section">
+              <h2>Harshit Kedia</h2>
+              <p class="subtitle">Building GenAI for India</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Section - Wide Horizontal -->
+        <div class="about-section">
+          <div class="about-content">
+            <p>
+              I love to build impactful tech and improve my understanding of
+              different domains. Passionate about GenAI, Large Language Models,
+              and solving complex problems with the new tech!
+            </p>
+            <div class="interests">
+              <strong>Interests:</strong> Generative AI & LLMs • Fine-tuning •
+              Reinforcement Learning • AI Agents • Vector Databases • Backend
+              Systems
+            </div>
+            <div class="interests">
+              <strong>Others:</strong> Travelling • Trekking • Football (Man
+              Utd) • Gaming (CSGO / Valorant / FIFA)
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="experience-section">
+          <h2>Professional Experience</h2>
+          <div class="experience">
+            <div class="job">
+              <div class="job-header">
+                <strong>Founding Engineer (ML)</strong>
+                <span class="company">Sarvam AI</span>
+                <span class="duration">Aug 2023 - Present</span>
+              </div>
+              <p class="job-description">
+                Building GenAI solutions for scale. Working on post-training
+                LLMs, creating AI agents.
+              </p>
+            </div>
+
+            <div class="job">
+              <div class="job-header">
+                <strong>Software Engineer</strong>
+                <span class="company">Graviton Research Capital</span>
+                <span class="duration">Jul 2022 - Aug 2023</span>
+              </div>
+              <p class="job-description">
+                Low latency Shared Memory communications, speeding up
+                simulations, crypto instruments support, any many book and order
+                management alphas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Internship Experience Section -->
+        <div class="experience-section">
+          <h2>
+            <button
+              onclick="toggleInternships()"
+              style="
+                background: none;
+                border: none;
+                color: inherit;
+                font: inherit;
+                cursor: pointer;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              Internship Experience
+              <span
+                id="internships-toggle"
+                style="
+                  font-size: 0.8em;
+                  transition: transform 0.2s;
+                  transform: rotate(-90deg);
+                "
+                >▼</span
+              >
+            </button>
+          </h2>
+          <div
+            id="internships-content"
+            class="experience"
+            style="display: none"
+          >
+            <div class="job">
+              <div class="job-header">
+                <strong>Product Engineering Intern</strong>
+                <span class="company">Sprinklr</span>
+                <span class="duration">Summer 2021</span>
+              </div>
+              <p class="job-description">
+                Microsoft Teams integration for sending notifications directly
+                as well as for employee registration on the portal.
+              </p>
+            </div>
+            <div class="job">
+              <div class="job-header">
+                <strong>Software Engineer Intern</strong>
+                <span class="company">IRage Broking Services LLP</span>
+                <span class="duration">Summer 2020</span>
+              </div>
+              <p class="job-description">
+                Low Latency market alert generator pipeline processing NSE data
+                stream with flexibility to plug custom alphas for desired
+                alerts.
+              </p>
+            </div>
+          </div>
+        </div>
+        <script>
+          function toggleInternships() {
+            const content = document.getElementById("internships-content");
+            const toggle = document.getElementById("internships-toggle");
+            if (content.style.display === "none") {
+              content.style.display = "flex";
+              toggle.style.transform = "rotate(0deg)";
+            } else {
+              content.style.display = "none";
+              toggle.style.transform = "rotate(-90deg)";
+            }
+          }
+        </script>
+
+        <!-- Research Publications Section -->
+        <div class="publications-section">
+          <h2>
+            <button
+              onclick="togglePublications()"
+              style="
+                background: none;
+                border: none;
+                color: inherit;
+                font: inherit;
+                cursor: pointer;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              "
+            >
+              Research Publications
+              <span
+                id="publications-toggle"
+                style="
+                  font-size: 0.8em;
+                  transition: transform 0.2s;
+                  transform: rotate(-90deg);
+                "
+                >▼</span
+              >
+            </button>
+          </h2>
+          <div
+            id="publications-content"
+            class="publications"
+            style="display: none"
+          >
+            <div class="publication">
+              <strong>
+                Naamapadam: A Large-Scale Named Entity Annotated Data for Indic
+                Languages
+              </strong>
+              <p class="publication-description">
+                Created a NER dataset and trained a SOTA BERT based model for
+                Indian languages with high accuracy.
+              </p>
+            </div>
+          </div>
+        </div>
+        <script>
+          function togglePublications() {
+            const content = document.getElementById("publications-content");
+            const toggle = document.getElementById("publications-toggle");
+            if (content.style.display === "none") {
+              content.style.display = "flex";
+              toggle.style.transform = "rotate(0deg)";
+            } else {
+              content.style.display = "none";
+              toggle.style.transform = "rotate(-90deg)";
+            }
+          }
+        </script>
+        <!-- Footer Links -->
+        <div class="links">
+          <a href="https://github.com/kediaharshit9" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/kediaharshit9" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="https://x.com/kediaharshit9" target="_blank">X</a>
+          <a href="mailto:kediaharshit9@gmail.com" target="_blank">Email</a>
+        </div>
+        <div
+          style="
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #718096;
+          "
+        >
+          Made with Claude ❤️
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
